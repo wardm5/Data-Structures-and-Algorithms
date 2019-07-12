@@ -11,7 +11,7 @@ public class main {
         System.out.println("test2");
         LinkedList list = new LinkedList();
         for (int i = 0; i <= 10; i++) {
-            list.add(i);
+            list.addToTail(i);
         }
         list.print();
     }

@@ -14,6 +14,7 @@ public class main {
         for (int i = 0; i <= 10; i++) {
             list.addToTail(i);
         }
+        list.addToHead(-1);
         list.print();
         System.out.println(list.isEmpty());
 

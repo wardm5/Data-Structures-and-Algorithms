@@ -24,7 +24,13 @@ public class LinkedList<T> {
         return true;
     }
     public boolean addToHead(T data) {
-        // to do
+        if (head == null) {
+            head = new Node(data);
+            return true;
+        }
+        Node temp = head;
+        head = new Node(data);
+        head.next = temp;
         return true;
     }
     public void print() {

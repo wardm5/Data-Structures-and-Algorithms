@@ -1,15 +1,23 @@
 public class LinkedList<T> {
-    // to be completed...
     private int count;
     public Node head;
+    /*
+     *  Constructor for Linked List (no parameter/data)
+     */
     public LinkedList() {
         head = null;
         count = 0;
     }
+    /*
+     *  Constructor for Linked List (parameter)
+     */
     public LinkedList(T data) {
         head = new Node(data);
         count = 1;
     }
+    /*
+     *  Add to Tail
+     */
     public boolean addToTail(T data) {
         if (head == null) {
             head = new Node(data);
@@ -23,6 +31,9 @@ public class LinkedList<T> {
         count++;
         return true;
     }
+    /*
+     *  Add to Head
+     */
     public boolean addToHead(T data) {
         if (head == null) {
             head = new Node(data);
@@ -33,6 +44,9 @@ public class LinkedList<T> {
         head.next = temp;
         return true;
     }
+    /*
+     *  Print
+     */
     public void print() {
         Node temp = head;
         while (temp != null) {
@@ -41,6 +55,9 @@ public class LinkedList<T> {
         }
         System.out.println();
     }
+    /*
+     *  Remove
+     */
     public boolean remove(T data) {
         // if (head == null)
         //     return false;
@@ -52,6 +69,9 @@ public class LinkedList<T> {
         // }
         return true;
     }
+    /*
+     *  Contains
+     */
     public boolean contains(T data) {
         if (head == null)
             return false;
@@ -63,8 +83,10 @@ public class LinkedList<T> {
         }
         return false;
     }
+    /*
+     *  isEmpty
+     */
     public boolean isEmpty() {
         return (count == 0);
     }
-
 }

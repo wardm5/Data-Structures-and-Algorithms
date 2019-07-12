@@ -25,5 +25,16 @@ public class main {
         System.out.println(list.contains(10));  // true
         list.remove(-2);
         list.print();
+        newSpace();
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
+        tree.add(5);
+        tree.print();
+
+
+    }
+    public static void newSpace() {
+        System.out.println();
+        System.out.println();
     }
 }

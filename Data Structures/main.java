@@ -9,10 +9,13 @@ public class main {
         Node test2 = new Node<Integer>(10);
         System.out.println(test2.get());
         System.out.println("test2");
-        LinkedList list = new LinkedList();
+        LinkedList<Integer> list = new LinkedList<>();
+        System.out.println(list.isEmpty());
         for (int i = 0; i <= 10; i++) {
             list.addToTail(i);
         }
         list.print();
+        System.out.println(list.isEmpty());
+
     }
 }

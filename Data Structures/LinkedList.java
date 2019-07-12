@@ -25,6 +25,7 @@ public class LinkedList<T> {
     }
     public boolean addToHead(T data) {
         // to do
+        return true;
     }
     public void print() {
         Node temp = head;
@@ -32,15 +33,32 @@ public class LinkedList<T> {
             temp.print();
             temp = temp.next;
         }
+        System.out.println();
     }
-    public boolean remove() {
-        // to do
+    public boolean remove(T data) {
+        // if (head == null)
+        //     return false;
+        // Node temp = head;
+        // while (temp.next != null) {
+        //     if (temp.get() == data) {
+        //
+        //     }
+        // }
+        return true;
     }
     public boolean contains() {
-        // to do
+        // if (head == null)
+        //     return false;
+        // Node temp = head;
+        // while (temp.next != null) {
+        //     if (temp.get() == data) {
+        //
+        //     }
+        // }
+        return true;
     }
     public boolean isEmpty() {
-        return (count == 0)
+        return (count == 0);
     }
 
 }

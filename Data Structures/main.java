@@ -8,5 +8,6 @@ public class main {
         System.out.println(test.get());
         Node test2 = new Node(10);
         System.out.println(test2.get());
+        System.out.println("test");
     }
 }

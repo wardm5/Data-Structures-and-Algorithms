@@ -68,7 +68,6 @@ public class LinkedList<T> {
                 head = temp.next;
                 return true;
             } else if (temp.get() == data) {
-                // System.out.println(prior.get() + "     " + temp.next.get());
                 prior.next = temp.next;
                 return true;
             } else {

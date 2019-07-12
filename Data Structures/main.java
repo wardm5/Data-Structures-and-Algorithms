@@ -20,5 +20,10 @@ public class main {
         System.out.println(list.contains(-1));  // true
         System.out.println(list.contains(3));   // true
         System.out.println(list.contains(11));  // false
+        list.remove(3);
+        System.out.println(list.contains(3));   // false
+        System.out.println(list.contains(10));  // true
+        list.remove(-2);
+        list.print();
     }
 }

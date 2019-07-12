@@ -59,15 +59,25 @@ public class LinkedList<T> {
      *  Remove
      */
     public boolean remove(T data) {
-        // if (head == null)
-        //     return false;
-        // Node temp = head;
-        // while (temp.next != null) {
-        //     if (temp.get() == data) {
-        //
-        //     }
-        // }
-        return true;
+        if (head == null)
+            return false;
+        Node prior = null;
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.get() == data && prior == null) {
+                head = temp.next;
+                return true;
+            } else if (temp.get() == data) {
+                // System.out.println(prior.get() + "     " + temp.next.get());
+                prior.next = temp.next;
+                return true;
+            } else {
+                System.out.println(temp.get() + " testing");
+                prior = temp;
+                temp = temp.next;
+            }
+        }
+        return false;
     }
     /*
      *  Contains

@@ -6,4 +6,10 @@ public class Node {
   public Node(int val) {
     this.data = val;
   }
+  public int get() {
+      return data;
+  }
+  public void set(int val) {
+      this.data = val;
+  }
 }

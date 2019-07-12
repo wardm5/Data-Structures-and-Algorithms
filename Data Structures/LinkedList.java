@@ -52,16 +52,16 @@ public class LinkedList<T> {
         // }
         return true;
     }
-    public boolean contains() {
-        // if (head == null)
-        //     return false;
-        // Node temp = head;
-        // while (temp.next != null) {
-        //     if (temp.get() == data) {
-        //
-        //     }
-        // }
-        return true;
+    public boolean contains(T data) {
+        if (head == null)
+            return false;
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.get() == data)
+                return true;
+            temp = temp.next;
+        }
+        return false;
     }
     public boolean isEmpty() {
         return (count == 0);

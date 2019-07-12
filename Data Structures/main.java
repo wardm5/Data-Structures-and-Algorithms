@@ -16,7 +16,9 @@ public class main {
         }
         list.addToHead(-1);
         list.print();
-        System.out.println(list.isEmpty());
-
+        System.out.println(list.isEmpty());     // false
+        System.out.println(list.contains(-1));  // true
+        System.out.println(list.contains(3));   // true
+        System.out.println(list.contains(11));  // false
     }
 }

@@ -85,7 +85,7 @@ public class LinkedList<T> {
         if (head == null)
             return false;
         Node temp = head;
-        while (temp.next != null) {
+        while (temp != null) {
             if (temp.get() == data)
                 return true;
             temp = temp.next;

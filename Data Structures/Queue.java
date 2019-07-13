@@ -30,4 +30,10 @@ public class Queue<T> {
         T result = temp.get();
         head = temp.next;
     }
+    public int size() {
+        return 0;
+    }
+    public boolean contains() {
+        return true;
+    }
 }

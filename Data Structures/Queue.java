@@ -1,6 +1,6 @@
 public class Queue<T> {
     // FIFO
-    private Node head;
+    private Node<T> head;
     private int count;
     public Queue() {
         head = null;
@@ -26,12 +26,13 @@ public class Queue<T> {
         return true;
     }
     public T remove() {
-        Node temp = head;
+        Node<T> temp = head;
         T result = temp.get();
         head = temp.next;
+        return result;
     }
     public int size() {
-        return 0;
+        return count;
     }
     public boolean contains() {
         return true;

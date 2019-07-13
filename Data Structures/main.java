@@ -29,8 +29,10 @@ public class main {
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
 
         tree.add(5);
-        tree.print();
-
+        // System.out.println(tree.add(6));
+        for (int i = 0; i <= 10; i++) {
+            tree.add(i);
+        }
 
     }
     public static void newSpace() {

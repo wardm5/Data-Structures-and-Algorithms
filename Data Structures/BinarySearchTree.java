@@ -1,7 +1,6 @@
-import java.util.*;
-public class BinarySearchTree<T> {
+public class BinarySearchTree<T extends Comparable<T>>  {
     private int count;
-    public TreeNode root;
+    public TreeNode<T> root;
     public BinarySearchTree() {
         root = null;
         count = 0;
@@ -15,18 +14,22 @@ public class BinarySearchTree<T> {
             root = new TreeNode(data);
             return true;
         }
-        // TreeNode tempRoot = root;
-        // while (tempRoot != null) {
-        //     if (tempRoot.get() > data && tempRoot.left == null) {
-        //         tempRoot.left = new TreeNode(data);
-        //     } else if (tempRoot.get() < data && tempRoot.right == null) {
-        //         tempRoot.right = new TreeNod(data);
-        //     } else if (tempRoot.get() > data) {
-        //         tempRoot = tempRoot.left;
-        //     } else  {
-        //         tempRoot = tempRoot.right;
-        //     }
-        // }
+        TreeNode<T> tempRoot = root;
+        while (tempRoot != null) {
+            if (tempRoot.get().compareTo(data) > 0 && tempRoot.left == null) {
+                tempRoot.left = new TreeNode(data);
+                count++;
+                System.out.println("left  " + data);
+            } else if (tempRoot.get().compareTo(data) < 0 && tempRoot.right == null) {
+                tempRoot.right = new TreeNode(data);
+                count++;
+                System.out.println("right  " + data + "     " + tempRoot.get());
+            } else if (tempRoot.get().compareTo(data) > 0) {
+                tempRoot = tempRoot.left;
+            } else  {
+                tempRoot = tempRoot.right;
+            }
+        }
         return true;
     }
     public void print() {
@@ -36,7 +39,6 @@ public class BinarySearchTree<T> {
         }
         if (root != null) {
             root.print();
-
         }
         System.out.println();
         // Stack<TreeNode> stack = new Stack<>();

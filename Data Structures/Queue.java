@@ -34,7 +34,13 @@ public class Queue<T> {
     public int size() {
         return count;
     }
-    public boolean contains() {
-        return true;
+    public boolean contains(T data) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.get() == data)
+                return true;
+            temp = temp.next;
+        }
+        return false;
     }
 }

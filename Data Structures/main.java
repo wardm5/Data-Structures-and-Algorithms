@@ -44,6 +44,10 @@ public class main {
         for (int i = 0; i <= 10; i++) {
             queue.add(i);
         }
+        System.out.println(queue.contains(-1));  // false
+        System.out.println(queue.contains(5));   // true
+        System.out.println(queue.contains(10));  // true
+        System.out.println(queue.contains(11));  // false
         for (int i = 0; i < queue.size(); i++) {
             System.out.print(queue.remove() + " ");
         }

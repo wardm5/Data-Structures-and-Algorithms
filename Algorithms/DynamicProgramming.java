@@ -22,7 +22,7 @@ public class DynamicProgramming {
         return factorialHelper(n, arr);
 
     }
-    public int factorialHelper(int n, int[] arr) {
+    private int factorialHelper(int n, int[] arr) {
         for (int i = 1; i <= n; i++) {
             arr[i] = arr[i - 1] * i;
         }

@@ -1,3 +1,9 @@
+/*
+    This file is focused on solving Dynamic Programming questions for interview situations and fun practice :D
+    Note:   methods will have the problem, underscore, and either TAB or MEMO denoting what type of dynamic programming
+            strategy I used for the method.
+ */
+
 public class DynamicProgramming {
     public DynamicProgramming() {}
     public int fibonacci_TAB(int n) {

@@ -9,18 +9,24 @@ import java.util.*;
 public class DynamicProgramming {
     public DynamicProgramming() {}
     public int fibonacci_TAB(int n) {
-        int[] arr = new int[n + 1];
-        return fibonacciHelper_TAB(n, arr);
+        int[] arr = new int[n + 1];   // Tabulation, set a new array of n+1 items, initalization to 0 is okay
+        return fibonacciHelper_TAB(n, arr);  // return the number and also the array
     }
-    private int fibonacciHelper_TAB(int n, int[] arr) {
-        if (n < 1)
+    private int fibonacciHelper_TAB(int n, int[] arr) {  // helper function that will hold the array
+        if (n < 1)   // if n is less than 1, then return 0
             return 0;
-        if (n == 1)
+        if (n == 1)  // if n is 1, then return 1
             return 1;
-        arr[0] = 0;
-        arr[1] = 1;
+        arr[0] = 0;  // other wise, set the first value in the as 0 (fib(0) = 0)
+        arr[1] = 1;  // set the second value in the as 1 (fib(1) = 1)
         for (int i = 2; i <= n; i++) {
-            arr[i] = arr[i - 1] + arr[i - 2];
+            arr[i] = arr[i - 1] + arr[i - 2];   // set each value after the second as the addition of both the two before
+                                                // arr[2] = arr[1] + arr[0] which is 1 + 0, so arr[2] will hold 1
+                                                // arr[3] = arr[2] + arr[1] which is 1 + 1, so arr[3] will hold 2
+                                                // arr[4] = arr[3] + arr[2] which is 2 + 1, so arr[4] will hold 3
+                                                // arr[5] = arr[4] + arr[3] which is 3 + 2, so arr[5] will hold 5
+                                                // this continues... eventually, you will return arr[n] which will hold the
+                                                // fib value for that index.
         }
         return arr[n];
     }

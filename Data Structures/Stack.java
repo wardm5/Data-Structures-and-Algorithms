@@ -9,6 +9,29 @@ public class Stack<T> {
         this.head = new Node(data);
         this.count = 1;
     }
-    public boolean add(T data)
-
+    public boolean push(T data) {
+        if (head == null) {
+            head = new Node(data);
+            return true;
+        }
+        Node temp = new Node(data);
+        temp.next = head;
+        head = temp;
+    }
+    public T pop() {
+        if (head == null) {
+            return null;
+        }
+        Node temp = head;
+        head = temp.next;
+        return temp.get();
+    }
+    public T peek() {
+        if (head == null)
+            return null;
+        return head.get();
+    }
+    public int size() {
+        return count;
+    }
 }

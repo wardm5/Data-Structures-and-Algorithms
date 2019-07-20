@@ -7,6 +7,7 @@ public class main {
         tests("Linked List");
         tests("Binary Tree");
         tests("Queue");
+        tests("Stack");
         // tests("Stack");
         // newSpace();
         // linkedListTests();
@@ -27,6 +28,8 @@ public class main {
             binaryTreeTests(test);
         else if (test.equals("Queue"))
             queueTests(test);
+        else if (test.equals("Stack"))
+            stackTests(test);
         newSpace();
     }
     // Linked List
@@ -83,6 +86,24 @@ public class main {
         for (int i = 0; i < queue.size(); i++) {
             System.out.print(queue.remove() + " ");
         }
+    }
+    public static void stackTests(String test) {
+        testIntro(test);
+        Stack<Integer> stack = new Stack<>();
+        System.out.println(stack.size());
+        for (int i = 0; i <= 10; i++) {
+            stack.push(i);
+            System.out.println(stack.peek());
+        }
+        System.out.println(stack.peek()); // should be 10
+        System.out.println("For loop pop part");
+        for (int i = 0; i < 8; i++) {
+            System.out.println(stack.pop() + " ");
+        }
+        System.out.println(stack.size()); // should be 2
+        System.out.println(stack.peek()); // should be 2
+        System.out.println(stack.pop()); // should be 2
+        System.out.println(stack.pop()); // should be 1
     }
     public static void testIntro(String test) {
         System.out.println("****** This is the test section for " + test.toUpperCase() + " ******");

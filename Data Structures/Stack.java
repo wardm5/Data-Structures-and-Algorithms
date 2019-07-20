@@ -12,19 +12,24 @@ public class Stack<T> {
     public boolean push(T data) {
         if (head == null) {
             head = new Node(data);
+            count++;
             return true;
         }
-        Node temp = new Node(data);
+        count++;
+        Node<T> temp = new Node(data);
         temp.next = head;
         head = temp;
+        return true;
     }
     public T pop() {
         if (head == null) {
             return null;
         }
-        Node temp = head;
+        count--;
+        Node<T> temp = head;
         head = temp.next;
-        return temp.get();
+        T result = temp.get();
+        return result;
     }
     public T peek() {
         if (head == null)

@@ -3,20 +3,11 @@
 public class main {
     public static void main(String[] args) {
         newSpace();
-        tests("Node");
-        tests("Linked List");
-        tests("Binary Tree");
-        tests("Queue");
-        tests("Stack");
-        // tests("Stack");
-        // newSpace();
-        // linkedListTests();
-        // newSpace();
-        // binaryTreeTests();
-        // newSpace();
-        // queueTests();
-        // newSpace();
-        // Stack
+        tests("Node");   // done
+        tests("Linked List");   // done
+        tests("Binary Tree");  // in progress
+        tests("Queue");   // done
+        tests("Stack");   // done
     }
     public static void tests(String test) {
 
@@ -96,14 +87,18 @@ public class main {
             System.out.println(stack.peek());
         }
         System.out.println(stack.peek()); // should be 10
-        System.out.println("For loop pop part");
+        System.out.println("Remove from stack");
         for (int i = 0; i < 8; i++) {
             System.out.println(stack.pop() + " ");
         }
-        System.out.println(stack.size()); // should be 2
-        System.out.println(stack.peek()); // should be 2
-        System.out.println(stack.pop()); // should be 2
-        System.out.println(stack.pop()); // should be 1
+        System.out.println("Testing stack methods indvidiually");
+        System.out.println("Stack size:  " + stack.size()); // should be 2
+        System.out.println("Stack peek:  " + stack.peek()); // should be 2
+        System.out.println("Stack pop:   " + stack.pop()); // should be 2
+        System.out.println("Stack pop:   " + stack.pop()); // should be 1
+        stack.pop();
+        stack.pop();
+        stack.pop();
     }
     public static void testIntro(String test) {
         System.out.println("****** This is the test section for " + test.toUpperCase() + " ******");

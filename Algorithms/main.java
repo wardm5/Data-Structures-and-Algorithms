@@ -5,6 +5,7 @@ public class main {
         //    NOTE: 0 = TAB, 1 = MEMO
         fib("fibonacci_TAB");
         fact("factorial_TAB");
+        uglyNum("Ugly Numbers_TAB");
     }
     private static void print(String str) {
         System.out.println(str);
@@ -34,6 +35,14 @@ public class main {
         print("Memoization");
         for(int i = 0; i <= 10; i++) {
             System.out.println(i + "  " + dp.factorial_MEMO(i));
+        }
+    }
+    private static void uglyNum(String str) {
+        newLine();
+        print("******** " + str.toUpperCase() + " TESTS ********");
+        print("Tabulation");
+        for(int i = 1; i <= 15; i++) {
+            System.out.println(i + "  " + dp.getNthUglyNumber_TAB(i));
         }
     }
 

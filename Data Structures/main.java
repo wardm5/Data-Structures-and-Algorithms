@@ -11,10 +11,13 @@ public class main {
         Map<Integer, String> map = new Map<>();
         map.add(20, "hi");
         newSpace();
-        System.out.print(map.get(30));
+        System.out.println(map.get(30));
         map.add(30, "test1");
+
         map.add(20, "test2");
+
         map.add(300, "elyse");
+        System.out.println(map.containsKey(300));
         // System.out.println(map.get(30));
         // System.out.println(map.get(20));
         // System.out.println(map.get(30));

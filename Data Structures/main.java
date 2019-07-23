@@ -1,5 +1,5 @@
 // import Node;
-
+import java.util.*;
 public class main {
     public static void main(String[] args) {
         newSpace();
@@ -8,6 +8,15 @@ public class main {
         tests("Binary Tree");  // in progress
         tests("Queue");   // done
         tests("Stack");   // done
+        Map<Integer, String> map = new Map<>();
+        map.add(20, "hi");
+        newSpace();
+        System.out.print(map.get(20));
+        map.add(30, "test1");
+        map.add(20, "test2");
+        
+        System.out.println(map.get(30));
+        System.out.println(map.get(20));
     }
     public static void tests(String test) {
 

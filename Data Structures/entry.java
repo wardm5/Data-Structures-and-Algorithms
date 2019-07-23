@@ -1,13 +1,16 @@
-public class entry<K,V> {
+public class Entry<K,V> {
     final private K key;
     private V value;
-    public entry() {
+    public Entry<K,V> next;
+    public Entry() {
         key = null;
         value = null;
+        this.next = null;
     }
-    public entry(K key, V value) {
+    public Entry(K key, V value) {
         this.key = key;
         this. value = value;
+        this.next = null;
     }
     public K getKey() {
         return key;
@@ -15,7 +18,7 @@ public class entry<K,V> {
     public V getValue() {
         return value;
     }
-    public setValue(V value) {
+    public void setValue(V value) {
         this.value = value;
     }
 }

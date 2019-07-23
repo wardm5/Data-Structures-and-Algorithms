@@ -28,17 +28,17 @@ public class Map<K, V> {
     }
     public V get(K key) {
         this.hash = key.hashCode();
-        System.out.println(hash);
-        System.out.println(table[hash % 10].getValue());
+        System.out.println("HashCode = " + hash);
+        System.out.println("table value = " + table[hash % 10].getValue());
         if (table[hash % 10] != null) {
-            System.out.println();
             Entry<K,V> temp = table[hash % 10];
-
-            System.out.println(temp.getValue());
             while (temp.next != null) {
                 temp = temp.next;
             }
-            return temp.getValue();
+            if (temp.getKey() == key)
+                return temp.getValue();
+            System.out.println("Your value did not exist");
+            return null;
         } else {
             return table[hash % 10].getValue();
         }

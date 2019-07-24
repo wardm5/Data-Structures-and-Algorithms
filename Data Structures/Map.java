@@ -70,6 +70,16 @@ public class Map<K, V> {
         return false;
     }
     // public boolean containsValue(V value) {
+    //     if (size == 0)
+    //         return false;
+    //     for (int i = 0 ; i < table.length; i++) {
+    //         if (table[i] != null) {
     //
+    //         }
+    //     }
+    //     return false;
     // }
+    public void clear() {
+        this.table = new Entry[10];
+    }
 }

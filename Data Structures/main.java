@@ -20,11 +20,9 @@ public class main {
         map.add(20, "test2");
         System.out.println(map.get(20));
         map.add(300, "elyse");
-
         System.out.println(map.containsKey(30));
-        // System.out.println(map.get(30));
-        // System.out.println(map.get(20));
-        // System.out.println(map.get(30));
+        map.clear();
+        System.out.println(map.containsKey(30));
     }
     public static void tests(String test) {
 

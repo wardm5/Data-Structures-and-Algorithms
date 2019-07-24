@@ -96,6 +96,7 @@ public class DynamicProgramming {
          } /*End of for loop (i=1; i<n; i++) */
          return next_ugly_no;
     }
+    public count
 
 
     /*

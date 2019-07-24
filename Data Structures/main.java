@@ -8,7 +8,6 @@ public class main {
         tests("Binary Tree");  // in progress
         tests("Queue");   // done
         tests("Stack");   // done
-
         newSpace();
         newSpace();
         Map<Integer, String> map = new Map<>();
@@ -22,13 +21,11 @@ public class main {
         System.out.println(map.containsValue("elyse"));  // false
         map.put(300, "elyse");
         System.out.println(map.containsValue("elyse"));  // true
-        // System.out.println(map.containsKey(30));
         map.clear();
         System.out.println(map.containsKey(30));         // false
         System.out.println(map.containsValue("elyse"));  // false
     }
     public static void tests(String test) {
-
         if (test.equals("Linked List"))
             linkedListTests(test);
         else if (test.equals("Node"))

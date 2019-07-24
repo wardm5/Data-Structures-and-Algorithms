@@ -98,4 +98,11 @@ public class LinkedList<T> {
     public boolean isEmpty() {
         return (count == 0);
     }
+    /*
+     *  clear()
+     */
+     public void clear() {
+         this.count = 0;
+         this.head = null;
+     }
 }

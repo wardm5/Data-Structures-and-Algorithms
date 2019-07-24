@@ -8,16 +8,20 @@ public class main {
         tests("Binary Tree");  // in progress
         tests("Queue");   // done
         tests("Stack");   // done
+
+        newSpace();
+        newSpace();
         Map<Integer, String> map = new Map<>();
         map.add(20, "hi");
-        newSpace();
+        System.out.println(map.get(20));
         System.out.println(map.get(30));
         map.add(30, "test1");
-
+        System.out.println(map.get(30));
         map.add(20, "test2");
-
+        System.out.println(map.get(20));
         map.add(300, "elyse");
-        System.out.println(map.containsKey(300));
+
+        System.out.println(map.containsKey(30));
         // System.out.println(map.get(30));
         // System.out.println(map.get(20));
         // System.out.println(map.get(30));

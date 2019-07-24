@@ -12,14 +12,14 @@ public class main {
         newSpace();
         newSpace();
         Map<Integer, String> map = new Map<>();
-        map.add(20, "hi");
+        map.put(20, "hi");
         System.out.println(map.get(20));
         System.out.println(map.get(30));
-        map.add(30, "test1");
+        map.put(30, "test1");
         System.out.println(map.get(30));
-        map.add(20, "test2");
+        map.put(20, "test2");
         System.out.println(map.get(20));
-        map.add(300, "elyse");
+        map.put(300, "elyse");
         System.out.println(map.containsKey(30));
         map.clear();
         System.out.println(map.containsKey(30));

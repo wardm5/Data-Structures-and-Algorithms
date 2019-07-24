@@ -1,5 +1,6 @@
 public class Map<K, V> {
     // to be completed later...
+    private Set<K> keySet;
     private int hash;
     private Entry<K, V>[] table = new Entry[10];
     private int size;
@@ -13,7 +14,7 @@ public class Map<K, V> {
         this.table[hash % 10] = new Entry<K, V>(key, value);
         this.size++;
     }
-    public void add(K key, V value) {
+    public void put(K key, V value) {
         this.hash = key.hashCode();
         if (table[hash % 10] != null) {
             Entry temp = table[hash % 10];
@@ -79,6 +80,12 @@ public class Map<K, V> {
     //     }
     //     return false;
     // }
+    // public boolean remove() {
+    //
+    // }
+    public Set<K> keySet() {
+        return this.keySet;
+    }
     public void clear() {
         this.table = new Entry[10];
     }

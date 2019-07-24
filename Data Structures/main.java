@@ -13,16 +13,19 @@ public class main {
         newSpace();
         Map<Integer, String> map = new Map<>();
         map.put(20, "hi");
-        System.out.println(map.get(20));
-        System.out.println(map.get(30));
+        System.out.println(map.get(20));  // hi
+        System.out.println(map.get(30));  // does not exist
         map.put(30, "test1");
-        System.out.println(map.get(30));
+        System.out.println(map.get(30));  // test1
         map.put(20, "test2");
-        System.out.println(map.get(20));
+        System.out.println(map.get(20));  // test2
+        System.out.println(map.containsValue("elyse"));  // false
         map.put(300, "elyse");
-        System.out.println(map.containsKey(30));
+        System.out.println(map.containsValue("elyse"));  // true
+        // System.out.println(map.containsKey(30));
         map.clear();
-        System.out.println(map.containsKey(30));
+        System.out.println(map.containsKey(30));         // false
+        System.out.println(map.containsValue("elyse"));  // false
     }
     public static void tests(String test) {
 

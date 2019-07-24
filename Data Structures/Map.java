@@ -1,15 +1,17 @@
 public class Map<K, V> {
     // to be completed later...
-    private Set<K> keySet;
+    // private Set<K> keySet;
     private int hash;
     private Entry<K, V>[] table = new Entry[10];
     private int size;
     public Map () {
+        // this.keySet = new Set();
         this.table = new Entry[10];
         this.hash = 0;
         this.size = 0;
     }
     public Map (K key, V value) {
+        // this.keySet = new Set(key);
         this.hash = key.hashCode();
         this.table[hash % 10] = new Entry<K, V>(key, value);
         this.size++;
@@ -28,6 +30,7 @@ public class Map<K, V> {
             temp.next = new Entry<K, V>(key, value);
         } else {
             table[hash % 10] = new Entry<K,V>(key, value);
+            // set.add(key);
         }
         this.size++;
     }
@@ -70,23 +73,33 @@ public class Map<K, V> {
         }
         return false;
     }
-    // public boolean containsValue(V value) {
-    //     if (size == 0)
-    //         return false;
-    //     for (int i = 0 ; i < table.length; i++) {
-    //         if (table[i] != null) {
-    //
-    //         }
-    //     }
-    //     return false;
-    // }
+    public boolean containsValue(V value) {
+        if (size == 0)
+            return false;
+        for (int i = 0 ; i < table.length; i++) {
+            if (table[i] != null) {
+                Entry<K, V> temp = table[i];
+                while (temp.next != null) {
+                    if (temp.getValue().equals(value))
+                        return true;
+                    temp = temp.next;
+                }
+                if (temp.getValue().equals(value))
+                    return true;
+            }
+        }
+        return false;
+    }
     // public boolean remove() {
     //
     // }
-    public Set<K> keySet() {
-        return this.keySet;
-    }
+    // public Set<K> keySet() {
+    //     return this.keySet;
+    // }
     public void clear() {
+        this.size = 0;
         this.table = new Entry[10];
+        this.hash = 0;
+        // this.keySet = new Set();
     }
 }

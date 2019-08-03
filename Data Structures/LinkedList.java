@@ -105,4 +105,10 @@ public class LinkedList<T> {
          this.count = 0;
          this.head = null;
      }
+     /*
+      *  getHead()
+      */
+     public Node getHead() {
+         return this.head;
+     }
 }

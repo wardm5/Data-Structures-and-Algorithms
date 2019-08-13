@@ -1,11 +1,9 @@
 import java.util.*;
-
 /*
     This file is focused on solving Dynamic Programming questions for interview situations and fun practice :D
     Note:   methods will have the problem, underscore, and either TAB or MEMO denoting what type of dynamic programming
             strategy I used for the method.
  */
-
 public class DynamicProgramming {
     public DynamicProgramming() {}
     public int fibonacci_TAB(int n) {
@@ -96,8 +94,6 @@ public class DynamicProgramming {
          } /*End of for loop (i=1; i<n; i++) */
          return next_ugly_no;
     }
-    public count
-
 
     /*
         We are given two strings: string S of length n, and string T of length m. Our goal is to produce their

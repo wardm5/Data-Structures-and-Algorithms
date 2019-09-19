@@ -6,6 +6,8 @@ public class main {
         fib("fibonacci_TAB");
         fact("factorial_TAB");
         uglyNum("Ugly Numbers_TAB");
+        permutation("Permutation");
+
     }
     private static void print(String str) {
         System.out.println(str);
@@ -45,5 +47,15 @@ public class main {
             System.out.println(i + "  " + dp.getNthUglyNumber_TAB(i));
         }
     }
+    private static void permutation(String str) {
+        newLine();
+        print("******** " + str.toUpperCase() + " TESTS ********");
+        String test = "abc";
+        List<String> res = dp.perm(test);
+        for (int i = 0; i < res.size(); i++) {
+            System.out.println(res.get(i));
+        }
+    }
+
 
 }

@@ -101,4 +101,25 @@ public class DynamicProgramming {
         necessarily in a contiguous block) in both strings.
      */
 
+
+     public List<String> perm(String temp) {
+         if (temp == null || temp.length() == 0)
+            return new ArrayList<>();
+        List<String> list = new ArrayList<>();
+        list.add("");
+        permHelper("", temp, list);
+        return list;
+     }
+     private void permHelper(String pre, String suf, List<String> list) {
+        if (suf.length() == 0) {
+            list.add(pre);
+        } else {
+            for (int i = 0; i < suf.length(); i++) {
+                permHelper(pre + suf.charAt(i), suf.substring(0, i) + suf.substring(i+1, suf.length()), list);
+            }
+        }
+     }
+
+
+
 }

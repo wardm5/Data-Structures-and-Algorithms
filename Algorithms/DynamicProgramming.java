@@ -102,11 +102,12 @@ public class DynamicProgramming {
      */
 
 
+
      public List<String> perm(String temp) {
          if (temp == null || temp.length() == 0)
             return new ArrayList<>();
         List<String> list = new ArrayList<>();
-        list.add("");
+        list.add("BLANK SPACE HERE");
         permHelper("", temp, list);
         return list;
      }
@@ -119,7 +120,4 @@ public class DynamicProgramming {
             }
         }
      }
-
-
-
 }

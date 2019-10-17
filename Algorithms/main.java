@@ -48,6 +48,7 @@ public class main {
         }
     }
     private static void permutation(String str) {
+        newLine();
         print("******** " + str.toUpperCase() + " TESTS ********");
         String test = "abc";
         List<String> res = dp.perm(test);

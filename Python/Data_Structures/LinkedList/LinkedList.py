@@ -31,14 +31,13 @@ class LinkedList():
         print("remove")
 
     def contains(self, value):
-        if (self.head == None):
-            return false
-        else:
-            prior = self.head
-            while (prior != None):
-                if (prior.val == value):
-                    return True
-                prior = prior.next
+        prior = self.head
+        while (prior != None):
+            if (prior.val == value):
+                print("list contains", value)
+                return True
+            prior = prior.next
+        print("list does not contain", value)
         return False
 
     def clear(self):

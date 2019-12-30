@@ -20,30 +20,38 @@ class LinkedList():
                 prior = prior.next
             prior.next = Node(value)
         self.count = self.count + 1
-        print("added", value)
+        return True
 
     def remove(self, value):
-        if (self.head == None):
-            return
-        # else:
-            # prior = self.head
-            # while(prior != None)
-        print("remove")
+        prior = None
+        curr = self.head
+        if (curr != None):
+            if (curr.val == value):
+                self.head = curr.next
+                self.count = self.count - 1
+                return
+        while(curr != None):
+            if (curr.val == value):
+                prev.next = curr.next
+                return True
+                self.count = self.count - 1
+                return
+            prev = curr
+            curr = curr.next
+        return False
 
     def contains(self, value):
         prior = self.head
         while (prior != None):
             if (prior.val == value):
-                print("list contains", value)
                 return True
             prior = prior.next
-        print("list does not contain", value)
         return False
 
     def clear(self):
         self.head = None
         self.count = 0
-        print("cleared data", self.count)
+        return True
 
     def print(self):
         if (self.head == None):

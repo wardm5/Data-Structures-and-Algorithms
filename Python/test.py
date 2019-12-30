@@ -25,12 +25,13 @@ from Data_Structures.LinkedList.LinkedList import *
 list = LinkedList(5)
 print(list.contains(6))
 list.add(6)
+list.add(8)
+list.print()
+list.remove(8)
 print(list.contains(6))
 list.print()
 list.clear()
 list.print()
-
-
 
 print()
 # fix to issue with % sign showing at the end of the python script

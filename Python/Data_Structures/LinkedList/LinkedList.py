@@ -21,14 +21,15 @@ class LinkedList():
             prior.next = Node(value)
         print("added", value)
 
-    def remove(self, val):
+    def remove(self, value):
         print("remove")
 
-    def search(self, val):
+    def search(self, value):
         print("search" + val)
 
     def clear():
-        print("clear")
+        self.head = None
+        print("cleared data")
 
     def print(self):
         prior = self.head

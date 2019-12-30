@@ -22,17 +22,27 @@ class LinkedList():
         print("added", value)
 
     def remove(self, value):
+        if (self.head == None):
+            return
+        # else:
+            # prior = self.head
+            # while(prior != None)
         print("remove")
 
-    def search(self, value):
+    def contains(self, value):
         print("search" + val)
 
-    def clear():
+    def clear(self):
         self.head = None
-        print("cleared data")
+        self.count = 0
+        print("cleared data", self.count)
 
     def print(self):
-        prior = self.head
-        while (prior != None):
-            print(prior.val, end="")
-            prior = prior.next
+        if (self.head == None):
+            print("nothing in list")
+        else:
+            prior = self.head
+            while (prior != None):
+                print(prior.val, "", end="")
+                prior = prior.next
+        print("")

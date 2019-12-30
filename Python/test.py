@@ -21,6 +21,8 @@ from Data_Structures.LinkedList.LinkedList import *
 list = LinkedList(5)
 list.add(6)
 list.print()
+list.clear()
+list.print()
 
 
 

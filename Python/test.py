@@ -12,7 +12,7 @@ for i in range(10):
     prior = prior.next
 
 # test out linked list
-print("Create 10 items, print items out.")
+print("Create 10 items, print items out. ")
 prior = head
 while (prior != None):
     print(prior.val, " ", end="")
@@ -33,6 +33,15 @@ list.print()
 list.clear()
 list.print()
 
-print()
+from Data_Structures.Map.Map import *
+map = Map()
+map.put(23, "test")
+map.put(100, "test2")
+print(map.get(23)) # print test
+print(map.get(24)) # print none
+print(map.getOrDefault(24, 0)) # print 0
+
+
+# print()
 # fix to issue with % sign showing at the end of the python script
 # https://stackoverflow.com/questions/36270945/percent-sign-at-the-end-of-the-output-of-python-script

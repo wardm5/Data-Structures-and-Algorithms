@@ -21,6 +21,7 @@ print("\n")
 
 print("LinkedList Tests: ")
 from Data_Structures.LinkedList.LinkedList import *
+
 list = LinkedList(5)
 print(list.contains(6))
 list.add(6)

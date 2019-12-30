@@ -1,6 +1,12 @@
 from Data_Structures.Node.Node import *
 
 class LinkedList():
+    # initalize with no value
+    def __init__(self):
+        self.head = None
+        self.count = 0
+
+    # initalize with first value
     def __init__(self, value):
         self.head = Node(value)
         self.count = 1
@@ -13,7 +19,7 @@ class LinkedList():
             while (prior.next != None):
                 prior = prior.next
             prior.next = Node(value)
-        print("added ", value)
+        print("added", value)
 
     def remove(self, val):
         print("remove")

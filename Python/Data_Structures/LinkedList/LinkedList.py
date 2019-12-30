@@ -19,6 +19,7 @@ class LinkedList():
             while (prior.next != None):
                 prior = prior.next
             prior.next = Node(value)
+        self.count = self.count + 1
         print("added", value)
 
     def remove(self, value):
@@ -30,7 +31,15 @@ class LinkedList():
         print("remove")
 
     def contains(self, value):
-        print("search" + val)
+        if (self.head == None):
+            return false
+        else:
+            prior = self.head
+            while (prior != None):
+                if (prior.val == value):
+                    return True
+                prior = prior.next
+        return False
 
     def clear(self):
         self.head = None

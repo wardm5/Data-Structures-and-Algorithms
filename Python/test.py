@@ -1,6 +1,7 @@
 from Data_Structures.Node.Node import *
 
 # Node Tests
+print("Node Tests: ")
 head = Node(0)
 prior = head
 
@@ -11,15 +12,19 @@ for i in range(10):
     prior = prior.next
 
 # test out linked list
+print("Create 10 items, print items out.")
 prior = head
 while (prior != None):
     print(prior.val, " ", end="")
     prior = prior.next
-print()
+print("\n")
 
+print("LinkedList Tests: ")
 from Data_Structures.LinkedList.LinkedList import *
 list = LinkedList(5)
+print(list.contains(6))
 list.add(6)
+print(list.contains(6))
 list.print()
 list.clear()
 list.print()

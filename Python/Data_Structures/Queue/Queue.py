@@ -19,7 +19,6 @@ from Data_Structures.Node.Node import *
             tail = tail.next
         return True
 
-
     def remove(self):
         if (self.head != None):
             res = self.head.val
@@ -27,3 +26,8 @@ from Data_Structures.Node.Node import *
             return res
         else:
             return None
+    def size():
+
+
+    def contains():
+        

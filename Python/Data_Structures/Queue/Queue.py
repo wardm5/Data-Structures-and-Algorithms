@@ -28,6 +28,12 @@ class Queue():
         else:
             return None
 
+    def peek(self):
+        if (self.head != None):
+            return self.head.val
+        else:
+            return None
+
     def size(self):
         return self.count
 

@@ -34,14 +34,8 @@ list.clear()
 list.print()
 
 from Data_Structures.Map.Map import *
-map = Map()
-# map.put(23, "test")
-# map.put(100, "test2")
-# print(map.get(23)) # print test
-# print(map.get(24)) # print none
-# print(map.getOrDefault(24, 0)) # print 0
-# print(map.get(100)) # should print test2
-for i in range(100):
+map = Map()   # create map
+for i in range(100):  # fill map with keys and values
     value = "test" + str(i)
     map.put(i, value)
 
@@ -53,8 +47,3 @@ print(map.getOrDefault(101, 0)) # print 0
 print(map.get(101))  # prints test12
 map.clear()
 print(map.get(101))
-
-
-# print()
-# fix to issue with % sign showing at the end of the python script
-# https://stackoverflow.com/questions/36270945/percent-sign-at-the-end-of-the-output-of-python-script

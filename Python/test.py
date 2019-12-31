@@ -49,8 +49,8 @@ map.clear()
 print(map.get(101))
 
 from Data_Structures.Queue.Queue import *
-queue = Queue(0)   # create Queue
-for i in range(1, 100):  # fill queue with keys and values
+queue = Queue()   # create Queue
+for i in range(0, 100):  # fill queue with keys and values
     queue.add(i)
 print(queue.size())
 print(queue.remove())

@@ -1,20 +1,15 @@
 from Data_Structures.Node.Node import *
 
 class Queue():
-    # def __init__(self, value = 0):
-    #     self.head = None
-    #     self.tail = None
-    #     self.count = 0
-
-    def __init__(self, value):
-        self.head = Node(value)
-        self.tail =  self.head
-        self.count = 1
+    def __init__(self, value = 0):
+        self.head = None
+        self.tail = None
+        self.count = 0
 
     def add(self, value):
         if (self.head == None):
             self.head = Node(value)
-            self.tail = head
+            self.tail = self.head
         else:
             curr = self.head
             while (curr.next != None):
@@ -43,3 +38,8 @@ class Queue():
                 return True
             curr = curr.next
         return False
+
+    def clear(self):
+        self.head = None
+        self.tail =  None
+        self.count = 0

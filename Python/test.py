@@ -35,11 +35,24 @@ list.print()
 
 from Data_Structures.Map.Map import *
 map = Map()
-map.put(23, "test")
-map.put(100, "test2")
-print(map.get(23)) # print test
-print(map.get(24)) # print none
-print(map.getOrDefault(24, 0)) # print 0
+# map.put(23, "test")
+# map.put(100, "test2")
+# print(map.get(23)) # print test
+# print(map.get(24)) # print none
+# print(map.getOrDefault(24, 0)) # print 0
+# print(map.get(100)) # should print test2
+for i in range(100):
+    value = "test" + str(i)
+    map.put(i, value)
+
+print(map.get(12))  # prints test12
+print(map.getOrDefault(101, 0)) # print 0
+print(map.get(101))  # prints test12
+map.put(101, "test101")
+print(map.getOrDefault(101, 0)) # print 0
+print(map.get(101))  # prints test12
+map.clear()
+print(map.get(101))
 
 
 # print()

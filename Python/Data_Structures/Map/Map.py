@@ -3,7 +3,6 @@ from Data_Structures.Entry.Entry import *
 class Map():
     def __init__(self):
         self.array = [None] * 100
-        self.size = 100
 
     def put(self, key, value):
         hashVal = hash(key) % 100
@@ -46,5 +45,5 @@ class Map():
             return None
 
     def clear(self):
+        self.array.clear()
         self.array = [None] * 100
-        self.size = 100

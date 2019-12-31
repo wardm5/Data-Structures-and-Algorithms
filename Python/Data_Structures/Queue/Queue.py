@@ -1,9 +1,10 @@
 from Data_Structures.Node.Node import *
 
-    def __init__(self):
-        self.head = None
-        self.tail = None
-        self.count = 0
+class Queue():
+    # def __init__(self, value = 0):
+    #     self.head = None
+    #     self.tail = None
+    #     self.count = 0
 
     def __init__(self, value):
         self.head = Node(value)
@@ -15,8 +16,11 @@ from Data_Structures.Node.Node import *
             self.head = Node(value)
             self.tail = head
         else:
-            tail.next =  Node(value)
-            tail = tail.next
+            curr = self.head
+            while (curr.next != None):
+                curr = curr.next
+            curr.next = Node(value)
+            tail = curr.next
         self.count = self.count + 1
         return True
 
@@ -32,5 +36,10 @@ from Data_Structures.Node.Node import *
     def size(self):
         return self.count
 
-    def contains():
-        
+    def contains(self, value):
+        curr = self.head
+        while (curr != None):
+            if (curr.val == value):
+                return True
+            curr = curr.next
+        return False

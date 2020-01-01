@@ -33,6 +33,7 @@ list.print()
 list.clear()
 list.print()
 
+print("Map Tests: ")
 from Data_Structures.Map.Map import *
 map = Map()   # create map
 for i in range(100):  # fill map with keys and values
@@ -48,6 +49,7 @@ print(map.get(101))  # prints test12
 map.clear()
 print(map.get(101))
 
+print("Queue Tests: ")
 from Data_Structures.Queue.Queue import *
 queue = Queue()   # create Queue
 for i in range(0, 100):  # fill queue with keys and values
@@ -56,3 +58,13 @@ print(queue.size())
 print(queue.remove())
 print(queue.remove())
 print(queue.size())
+
+print("Stack Tests: ")
+from Data_Structures.Stack.Stack import *
+stack = Stack()
+print(stack.peek())
+print(stack.pop())
+for i in range(0, 100):  # fill queue with keys and values
+    stack.push(i)
+print(stack.peek())
+print(stack.pop())

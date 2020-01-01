@@ -32,3 +32,7 @@ class Stack():
 
     def isEmpty(self):
         return (self.count > 0)
+
+    def clear(self):
+        self.head = None
+        self.count = 0

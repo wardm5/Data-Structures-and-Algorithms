@@ -20,4 +20,12 @@ class Stack():
         else:
             return self.head.val
 
+    def pop(self):
+        if (self.head == None):
+            return None
+        else:
+            temp = self.head.val
+            self.head = self.head.next
+            return temp
+
     

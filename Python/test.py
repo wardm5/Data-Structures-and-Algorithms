@@ -68,3 +68,4 @@ for i in range(0, 100):  # fill queue with keys and values
     stack.push(i)
 print(stack.peek())
 print(stack.pop())
+print(stack.peek())

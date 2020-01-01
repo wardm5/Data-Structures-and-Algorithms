@@ -13,7 +13,7 @@ class Stack():
             temp.next = self.head
             self.head = temp
         self.count = self.count + 1
-        return true
+        return True
 
     def peek(self):
         if (self.head == None):
@@ -27,7 +27,7 @@ class Stack():
         else:
             temp = self.head.val
             self.head = self.head.next
-            sefl.count = self.count - 1
+            self.count = self.count - 1
             return temp
 
     def isEmpty(self):

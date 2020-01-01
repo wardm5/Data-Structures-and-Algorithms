@@ -14,4 +14,10 @@ class Stack():
             self.head = temp
         return true
 
+    def peek(self):
+        if (self.head == None):
+            return None
+        else:
+            return self.head.val
+
     

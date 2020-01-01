@@ -44,6 +44,13 @@ class Map():
                     curr = curr.next
             return None
 
+    # Returns true if this map contains a mapping for the specified key.
+    def containsKey(self, key):
+
+    # Returns true if this map maps one or more keys to the specified value.
+    def containsValue(self, value):
+
+
     def clear(self):
         self.array.clear()
         self.array = [None] * 100

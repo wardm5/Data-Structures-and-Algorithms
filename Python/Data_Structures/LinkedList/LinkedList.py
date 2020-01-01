@@ -55,7 +55,8 @@ class LinkedList():
 
     def print(self):
         if (self.head == None):
-            print("nothing in list")
+            print("Warning, nothing in list.")
+            return
         else:
             prior = self.head
             while (prior != None):

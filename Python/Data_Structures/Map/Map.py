@@ -72,3 +72,10 @@ class Map():
     def clear(self):
         self.array.clear()
         self.array = [None] * self.size
+
+    # Returns true if this map contains no key-value mappings.
+    def isEmpty(self):
+        for item in self.array:
+            if (item != None):
+                return False
+        return True

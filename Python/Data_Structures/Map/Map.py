@@ -4,6 +4,7 @@ class Map():
     def __init__(self, size):
         self.array = [None] * size
         self.size = size
+        self.count = 0
 
     def put(self, key, value):
         hashVal = hash(key) % self.size
@@ -18,6 +19,7 @@ class Map():
                     return oldVal
                 curr = curr.next
             curr.next = Entry(key, value)
+        self.count = self.count + 1
 
     def getOrDefault(self, key, defaultVal):
         hashVal = hash(key) % self.size
@@ -69,13 +71,17 @@ class Map():
                     curr = curr.next
         return False
 
+    # Removes the mapping for a key from this map if it is present (optional operation).
+    def remove(self, key):
+        
+
     def clear(self):
         self.array.clear()
         self.array = [None] * self.size
 
     # Returns true if this map contains no key-value mappings.
     def isEmpty(self):
-        for item in self.array:
-            if (item != None):
-                return False
-        return True
+        return self.count > 0
+
+    def size(self):
+        return self.count

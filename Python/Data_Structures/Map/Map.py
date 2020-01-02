@@ -77,7 +77,7 @@ class Map():
 
     # Removes the mapping for a key from this map if it is present (optional operation).
     def remove(self, key):
-        print("remove")
+        hashVal = hash(key) % self.size
 
     # Removes all of the mappings from this map (optional operation).
     def clear(self):

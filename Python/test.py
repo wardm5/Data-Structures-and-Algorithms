@@ -1,7 +1,7 @@
 from Data_Structures.Node.Node import *
 
 # Node Tests
-print("Node Tests: ")
+print("NODE TESTS: ")
 head = Node(0)
 prior = head
 
@@ -18,7 +18,7 @@ while (prior != None):
     print(prior.val, " ", end="")
     prior = prior.next
 
-print("\nLinkedList Tests: ")
+print("\nLINKEDLIST TESTS: ")
 from Data_Structures.LinkedList.LinkedList import *
 list = LinkedList(5)
 print(list.contains(6))
@@ -32,7 +32,7 @@ list.clear()
 list.print()
 # print("\n")
 
-print("\nMap Tests: ")
+print("\nMAP TESTS: ")
 from Data_Structures.Map.Map import *
 map = Map(100)   # create map
 print(map.isEmpty())
@@ -53,7 +53,7 @@ map.clear()
 print(map.get(101))
 # print("\n")
 
-print("\nQueue Tests: ")
+print("\nQUEUE TESTS: ")
 from Data_Structures.Queue.Queue import *
 queue = Queue()   # create Queue
 for i in range(0, 100):  # fill queue with keys and values
@@ -63,7 +63,7 @@ print(queue.remove())
 print(queue.remove())
 print(queue.size())
 
-print("\nStack Tests: ")
+print("\nSTACK TESTS: ")
 from Data_Structures.Stack.Stack import *
 stack = Stack()
 print(stack.peek())

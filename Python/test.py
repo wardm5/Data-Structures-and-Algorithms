@@ -34,7 +34,7 @@ list.print()
 
 print("\nMap Tests: ")
 from Data_Structures.Map.Map import *
-map = Map()   # create map
+map = Map(100)   # create map
 for i in range(100):  # fill map with keys and values
     value = "test" + str(i)
     map.put(i, value)
@@ -44,6 +44,8 @@ print(map.get(101))  # prints test12
 map.put(101, "test101")
 print(map.getOrDefault(101, 0)) # print 0
 print(map.get(101))  # prints test12
+print(map.containsKey(12))
+print(map.containsValue("test12"))
 map.clear()
 print(map.get(101))
 # print("\n")

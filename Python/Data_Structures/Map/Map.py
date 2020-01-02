@@ -46,10 +46,19 @@ class Map():
 
     # Returns true if this map contains a mapping for the specified key.
     def containsKey(self, key):
+        hashVal = hash(key) % 100
+        if (self.array[hashVal] == None):
+            return False
+        else:
+            curr = self.array[hashVal]
+            while(curr != None):
+                if (curr.key == key):
+                    return True
+        return False
 
     # Returns true if this map maps one or more keys to the specified value.
     def containsValue(self, value):
-
+        
 
     def clear(self):
         self.array.clear()

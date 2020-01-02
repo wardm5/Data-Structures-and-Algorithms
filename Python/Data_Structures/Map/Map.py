@@ -58,7 +58,13 @@ class Map():
 
     # Returns true if this map maps one or more keys to the specified value.
     def containsValue(self, value):
-        
+        for item in self.array:
+            if (item != None):
+                curr = item
+                while(curr != None):
+                    if (curr.val == value):
+                        return True
+        return False
 
     def clear(self):
         self.array.clear()
